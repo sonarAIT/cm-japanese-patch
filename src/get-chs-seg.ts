@@ -26,7 +26,6 @@ export const getChsSegFromRange = (
     let chunkStart = 0,
       chunkEnd;
     const relativePos = cursor - from;
-    console.log(segResult)
 
     for (const seg of segResult) {
       chunkEnd = chunkStart + seg.length;
