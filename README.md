@@ -16,7 +16,7 @@ Special Thanks to [@linonetwo](https://github.com/linonetwo) and [Taku Kudo](htt
 
 ## Compatibility
 
-The required API feature is only available for Obsidian v0.13.8+.
+The required API feature is only available for Obsidian v0.13.8+.  
 必要なAPI機能は，Obsidian v0.13.8+でのみ利用可能です．
 
 ## Installation インストール方法
