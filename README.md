@@ -4,8 +4,8 @@ A patch for Obsidian's built-in CodeMirror Editor to support Japanese word split
 
 Obsidian内蔵のCodeMirrorエディタが日本語の単語分割をサポートするためのパッチ．
 
-This plugin is based on [the chs word splitting module](https://github.com/linonetwo/segmentit) by [@linonetwo](https://github.com/linonetwo) and modified to Japanese version.
-For Japanese word segmentation, we used [tiny-segmenter](http://chasen.org/~taku/software/TinySegmenter/) created by [Taku Kudo](https://github.com/taku910).
+This plugin is based on [the chs word splitting module](https://github.com/linonetwo/segmentit) by [@linonetwo](https://github.com/linonetwo) and modified to Japanese version.  
+For Japanese word segmentation, we used [tiny-segmenter](http://chasen.org/~taku/software/TinySegmenter/) created by [Taku Kudo](https://github.com/taku910).  
 Special Thanks to [@linonetwo](https://github.com/linonetwo) and [Taku Kudo](https://github.com/taku910)!
 
 ## Demo
