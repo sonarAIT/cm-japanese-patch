@@ -1,9 +1,9 @@
 {
   "id": "cm-japanese-patch",
-  "name": "Word Splitting for Simplified Japanese in Edit Mode",
+  "name": "Word Splitting for Japanese in Edit Mode",
   "version": "1.0.0",
   "minAppVersion": "0.13.8",
-  "description": "A patch for Obsidian's built-in CodeMirror Editor to support Simplified Japanese word splitting",
+  "description": "A patch for Obsidian's built-in CodeMirror Editor to support Japanese word splitting",
   "author": "sonarAIT",
   "authorUrl": "https://github.com/sonarAIT",
   "isDesktopOnly": true
