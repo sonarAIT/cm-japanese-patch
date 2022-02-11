@@ -17,3 +17,6 @@ styles.css
 
 # saved data
 data.json
+
+# macOS
+.DS_Store
