@@ -21,13 +21,24 @@ export default {
     exports: "default",
     banner,
   },
+  output: {
+    file: "../main.js",
+    sourcemap: "inline",
+    sourcemapExcludeSources: isProd,
+    format: "cjs",
+    exports: "default",
+    banner,
+  },
   external: ["obsidian", "@codemirror/state", "@codemirror/view"],
   plugins: [
     typescript(),
     nodeResolve({ browser: true }),
     commonjs(),
     copy({
-      targets: [{ src: "manifest.json", dest: "build" }, { src: "build/*", dest: ".." }],
-    })
+      targets: [
+        { src: "manifest.json", dest: "build" },
+        { src: "manifest.json", dest: ".." },
+      ],
+    }),
   ],
 };
