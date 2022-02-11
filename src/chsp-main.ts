@@ -13,7 +13,7 @@ const chsRegex = /[\u4e00-\u9fa5]/g;
 export default class CMChsPatch extends Plugin {
   api?: ChsPatchAPI;
 
-  tinySegmenter: TinySegmenter;
+  tinySegmenter: ReturnType<typeof TinySegmenter>;
 
   async onload() {
     console.log("loading cm-chs-patch");
