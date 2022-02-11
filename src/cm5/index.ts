@@ -1,10 +1,9 @@
 import type CodeMirror from "codemirror";
 import { around } from "monkey-around";
-import type { useDefault } from "segmentit";
-
+import type { TinySegmenter } from "tiny-segmenter/lib/index";
 import { getChsSegFromRange } from "../get-chs-seg";
 
-const patchGetWordAt = (seg: ReturnType<typeof useDefault>) => {
+const patchGetWordAt = (seg: ReturnType<typeof TinySegmenter>) => {
   if (!window.CodeMirror?.prototype) return null;
   return around(window.CodeMirror.prototype as CodeMirror.Editor, {
     findWordAt: (next) =>

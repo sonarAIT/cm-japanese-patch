@@ -1,6 +1,6 @@
 import { SelectionRange } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";
-import type { useDefault } from "segmentit";
+import type { TinySegmenter } from "tiny-segmenter/lib/index";
 
 import { groupAt } from "./from-src";
 import cm6GetChsSeg from "./get-seg";
@@ -11,7 +11,7 @@ const rangeForClick = (
   pos: number,
   bias: -1 | 1,
   type: number,
-  seg: ReturnType<typeof useDefault>,
+  seg: ReturnType<typeof TinySegmenter>,
 ): SelectionRange =>
   cm6GetChsSeg(pos, groupAt(view.state, pos, bias), view.state, seg);
 

@@ -1,6 +1,6 @@
 import { Plugin } from "obsidian";
 import pinyin from "pinyinlite";
-import { Segment, useDefault } from "segmentit";
+import TinySegmenter from "tiny-segmenter/lib/index";
 
 import { API_NAME, ChsPatchAPI, Evt_ApiReady } from "./api";
 import patchGetWordAt from "./cm5";
@@ -13,21 +13,21 @@ const chsRegex = /[\u4e00-\u9fa5]/g;
 export default class CMChsPatch extends Plugin {
   api?: ChsPatchAPI;
 
-  segmentit: any;
+  tinySegmenter: TinySegmenter;
 
   async onload() {
     console.log("loading cm-chs-patch");
-    this.segmentit = useDefault(new Segment());
+    this.tinySegmenter = new TinySegmenter()
 
     this.loadApi();
 
     // for cm5
-    const cm5PatchUnloader = patchGetWordAt(this.segmentit);
+    const cm5PatchUnloader = patchGetWordAt(this.tinySegmenter);
     cm5PatchUnloader && this.register(cm5PatchUnloader);
 
     // for cm6
-    this.registerEditorExtension(getChsPatchExtension(this.segmentit));
-    this.register(getWordAtPatchUnloader(this.segmentit));
+    this.registerEditorExtension(getChsPatchExtension(this.tinySegmenter));
+    this.register(getWordAtPatchUnloader(this.tinySegmenter));
   }
 
   loadApi() {
