@@ -18,7 +18,8 @@
   "author": "AidenLx",
   "license": "MIT",
   "dependencies": {
-    "obsidian": "github:obsidianmd/obsidian-api"
+    "obsidian": "github:obsidianmd/obsidian-api",
+    "tiny-segmenter": "^0.2.0"
   },
   "devDependencies": {
     "@codemirror/view": "0.19.30",
