@@ -1,11 +1,11 @@
-import TinySegmenter from "tiny-segmenter/lib/index"
+import {TinySegmenter} from "tiny_segmenter-0.2"
 
 const RANGE_LIMIT = 6;
 
 export const getChsSegFromRange = (
   cursor: number,
   range: { from: number; to: number; text: string },
-  seg: ReturnType<typeof TinySegmenter>,
+  seg: TinySegmenter,
 ) => {
   let { from, to, text } = range;
   if (!/[\u4e00-\u9fa5]/.test(text)) {
@@ -23,8 +23,8 @@ export const getChsSegFromRange = (
       to = newTo;
     }
     const segResult = seg.segment(text);
-    let chunkStart = 0,
-      chunkEnd;
+    let chunkStart = 0;
+    let chunkEnd = 0;
     const relativePos = cursor - from;
 
     for (const seg of segResult) {

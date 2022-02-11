@@ -3,7 +3,7 @@ import {
   EditorState,
   SelectionRange,
 } from "@codemirror/state";
-import type { TinySegmenter } from "tiny-segmenter/lib/index";
+import type { TinySegmenter } from "tiny_segmenter-0.2";
 
 import { getChsSegFromRange } from "../get-chs-seg";
 
@@ -11,20 +11,20 @@ export default function cm6GetChsSeg(
   pos: number,
   srcRange: SelectionRange,
   state: EditorState,
-  seg: ReturnType<typeof TinySegmenter>,
+  seg: TinySegmenter,
 ): SelectionRange;
 export default function cm6GetChsSeg(
   pos: number,
   srcRange: SelectionRange | null,
   state: EditorState,
-  seg: ReturnType<typeof TinySegmenter>,
+  seg: TinySegmenter,
 ): SelectionRange | null;
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function cm6GetChsSeg(
   pos: number,
   srcRange: SelectionRange | null,
   state: EditorState,
-  seg: ReturnType<typeof TinySegmenter>,
+  seg: TinySegmenter,
 ): SelectionRange | null {
   if (!srcRange) return null;
   const { from, to } = srcRange,

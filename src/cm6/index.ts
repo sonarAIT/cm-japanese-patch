@@ -2,13 +2,13 @@
 import { EditorSelection, EditorState } from "@codemirror/state";
 import { EditorView, MouseSelectionStyle } from "@codemirror/view";
 import { around } from "monkey-around";
-import type { TinySegmenter } from "tiny-segmenter/lib/index";
+import type { TinySegmenter } from "tiny_segmenter-0.2";
 
 import { queryPos } from "./from-src";
 import cm6GetChsSeg from "./get-seg";
 import rangeForClick from "./range-for-click";
 
-export const getChsPatchExtension = (seg: ReturnType<typeof TinySegmenter>) => {
+export const getChsPatchExtension = (seg: TinySegmenter) => {
   const dblClickPatch = EditorView.mouseSelectionStyle.of((view, event) => {
     // Only handle double clicks
     if (event.button !== 0 || event.detail !== 2) return null;
@@ -68,7 +68,7 @@ export const getChsPatchExtension = (seg: ReturnType<typeof TinySegmenter>) => {
   return [dblClickPatch];
 };
 
-export const getWordAtPatchUnloader = (seg: ReturnType<typeof TinySegmenter>) =>
+export const getWordAtPatchUnloader = (seg: TinySegmenter) =>
   around(EditorState.prototype, {
     wordAt: (next) =>
       function (this: EditorState, pos: number) {
