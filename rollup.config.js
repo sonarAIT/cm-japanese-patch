@@ -27,7 +27,7 @@ export default {
     nodeResolve({ browser: true }),
     commonjs(),
     copy({
-      targets: [{ src: "manifest.json", dest: "build" }],
-    }),
+      targets: [{ src: "manifest.json", dest: "build" }, { src: "build/*", dest: ".." }],
+    })
   ],
 };
