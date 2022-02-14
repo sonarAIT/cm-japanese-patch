@@ -1,5 +1,5 @@
 {
-  "id": "cm-japanese-patch",
+  "id": "japanese-word-splitter",
   "name": "Word Splitting for Japanese in Edit Mode",
   "version": "1.0.0",
   "minAppVersion": "0.13.8",

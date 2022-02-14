@@ -6,7 +6,7 @@ import { getChsPatchExtension, getWordAtPatchUnloader } from "./cm6/index";
 
 export default class CMJapanesePatch extends Plugin {
   async onload() {
-    console.log("loading cm-japanese-patch");
+    console.log("loading japanese-word-splitter");
     let tinySegmenter: TinySegmenter = new TinySegmenter();
 
     // for cm5

@@ -42,7 +42,7 @@ The required API feature is only available for Obsidian v0.13.8+.
 ### From GitHub
 
 1. Download the Latest Release from the Releases section of the GitHub Repository
-2. Put files to your vault's plugins folder: `<vault>/.obsidian/plugins/cm-japanese-patch`  
+2. Put files to your vault's plugins folder: `<vault>/.obsidian/plugins/japanese-word-splitter`  
 3. Reload Obsidian
 4. If prompted about Safe Mode, you can disable safe mode and enable the plugin.
 Otherwise head to Settings, third-party plugins, make sure safe mode is off and
@@ -53,7 +53,7 @@ enable the plugin from there.
 ***
 
 1. GitHubリポジトリのReleasesからLatest Releaseをダウンロードします．
-2. vaultのpluginsフォルダにファイルを配置します．`<vault>/.obsidian/plugins/cm-japanese-patch`にファイルを置きます．
+2. vaultのpluginsフォルダにファイルを配置します．`<vault>/.obsidian/plugins/japanese-word-splitter`にファイルを置きます．
 3. Obsidianをリロードします．
 4. セーフモードについてプロンプトが表示されたら，セーフモードを無効にしてプラグインを有効にすることができます．それ以外の場合は，`設定`から`コミュニティプラグイン`に移動し，セーフモードがオフになっていることを確認し，そこからプラグインを有効にしてください．
 
